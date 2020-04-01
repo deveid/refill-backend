@@ -12,8 +12,12 @@ before_script: # => 6
 script: # => 7
   - (python manage.py test)
   - (python manage.py runserver)
-  # - (cd frontend/gas && npm start && npm run build)
-notifications: # 8
+deploy: # 8
+  provider: heroku
+  api_key: 3488bd7f-e6ea-4701-ade0-5e22f6f43f2f
+  app: refill-api
+
+notifications: # 9
   email:
     recipients:
       - deveidtolu18@gmail.com
