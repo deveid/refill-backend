@@ -6,11 +6,11 @@ services: # => 3
 env: # => 4
   -DJANGO=2.2.5 DB=postgresql
 install: # => 5
-  - (cd backend/project && pip install -r requirements.txt)
+  - (pip install -r requirements.txt)
 before_script: # => 6
   - psql -c 'create database test;' -U postgres
 script: # => 7
-  - (cd backend/project && python manage.py test)
+  - (python manage.py test)
   # - (cd backend/project && python manage.py runserver)
   # - (cd frontend/gas && npm start && npm run build)
 notifications: # 8
