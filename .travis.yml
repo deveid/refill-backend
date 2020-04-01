@@ -11,9 +11,9 @@ before_script: # => 6
   - psql -c 'create database test;' -U postgres
 script: # => 7
   - (python manage.py test)
-  - (python manage.py makemigrations)
-  - (python manage.py migrate)
-  - (python manage.py runserver)
+  # - (python manage.py makemigrations)
+  # - (python manage.py migrate)
+  # - (python manage.py runserver)
 deploy: # 8
   provider: heroku
   api_key: 3488bd7f-e6ea-4701-ade0-5e22f6f43f2f
